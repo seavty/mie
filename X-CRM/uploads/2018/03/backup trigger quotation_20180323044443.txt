@@ -1,0 +1,61 @@
+USE [mie]
+GO
+/****** Object:  Trigger [dbo].[tblQuotation_Ref]    Script Date: 1/16/2018 11:18:56 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER TRIGGER [dbo].[tblQuotation_Ref]
+   ON  [dbo].[tblQuotation]
+   AFTER Update,INSERT
+AS 
+BEGIN
+ SET NOCOUNT ON;
+ Declare @ref int
+ Declare @id int
+ Declare @oref varchar(20)
+ Declare @startDate datetime
+ Declare @revise varchar(20)
+
+
+ DECLARE cur CURSOR LOCAL READ_ONLY FAST_FORWARD FOR
+    Select quot_QuotationID, quot_Name, quot_CreatedDate, quot_ReviseFromQuotID From inserted
+ OPEN cur
+
+    FETCH NEXT FROM cur INTO @id,@oref,@startDate,@revise
+    WHILE @@FETCH_STATUS = 0 BEGIN
+  if(@oref is null)
+  Begin  
+   
+   
+   Declare @m nvarchar(10)
+   Declare @y nvarchar(10)
+
+   set @m = CONVERT(nvarchar(10),stuff(MONTH(@startDate) , 1, 0, replicate('0', 2 - len(MONTH(@startDate)))))
+   set @y = CONVERT(nvarchar(10),Year(@startDate))
+   Declare @casecount int = 0
+   --Select @casecount=count(1) from SalesOrder Where year(sord_CreatedDate)=@y
+   Select @casecount=count(1) from tblQuotation where  year(quot_CreatedDate)=@y
+   
+   set @ref = @casecount
+  
+	if(@revise IS NULL)
+		Begin	
+			Update tblQuotation SET quot_Name  = 'QUOT-' + RIGHT(@y,2) + stuff(@ref , 1, 0, replicate('0', 5 - len(@ref))), quot_Reference='QUOT-' + RIGHT(@y,2) + stuff(@ref , 1, 0, replicate('0', 5 - len(@ref)))
+			Where quot_QuotationID = @id
+		END
+	ELSE
+		BEGIN
+			DECLARE @value VARCHAR(50)
+			DECLARE @version INT
+			SELECT @version=COUNT(quot_Reference) FROM tblQuotation WHERE quot_ReviseFromQuotID=@revise
+
+			Update tblQuotation SET quot_Name  = quot_Reference + 'R' + @version
+			Where quot_QuotationID = @id
+		END
+  END
+  FETCH NEXT FROM cur INTO @id,@oref,@startDate,@revise
+    CLOSE cur
+    END
+    DEALLOCATE cur
+END

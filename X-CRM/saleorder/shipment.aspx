@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="shipment.aspx.cs" Inherits="X_CRM.saleorder.shipment" %>

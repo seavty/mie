@@ -1,0 +1,38 @@
+ <form id="frm" >
+        <div class="row flex-just-center ">
+            <div class="cell auto-size align-center bg-grayLighter">
+                <label>Menu Setup</label>
+                <input id="txtMenuName" name="txtFloorName" class="button rounded" placeholder="Name">
+                <button id="" onclick="AddNew()" class="button success rounded">New</button>
+            </div>
+        </div>
+        <div class="row flex-just-center align-center auto-size">
+            <div class="cell auto-size  bg-grayLight text rounded">
+                <label>Categories</label>
+                <select id="idFloor" name="idFloor" class="input-control select " onchange="CategoryChanged()">
+                    @foreach (var item in ViewBag.Menug)
+                    {
+                        <option id="@item.Menug_ID">@item.Menug_Name</option>
+                    }
+                </select>
+
+                <label class="padding10">Price</label>
+                <input id="txtPrice" name="txtPrice" class="input-control rounded" type="text" placeholder="price" />
+
+                <label>Status</label>
+                <select id="status" name="status" class="input-control select">
+                    <option>Good</option>
+                    <option>Empty</option>
+                </select>
+
+                <label>Image </label>
+                    <input id="idImg" name="idImg" type="file" multiple class="input-control text rounded ">
+            </div>
+
+            </form>
+
+//transparent textbox
+https://www.experts-exchange.com/questions/20679836/Transparent-TextBox-in-C.html
+https://www.codeproject.com/Questions/740351/How-do-I-simply-Transparent-a-TextBox-in-Csharp-en
+https://devtools.bunifu.co.ke/forums/topic/login-screen/
+https://www.codeproject.com/Articles/4390/AlphaBlendTextBox-A-transparent-translucent-textbo

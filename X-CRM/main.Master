@@ -1,0 +1,276 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="X_CRM.main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+    <title>X-CRM</title>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <%
+        string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + HttpContext.Current.Request.ApplicationPath + (HttpContext.Current.Request.ApplicationPath != "/" ? "/" : "");
+        
+    %>
+    <link href="Scripts/css/metro.min.css" rel="stylesheet" />
+    <link href="Scripts/css/metro-icons.min.css" rel="stylesheet" />
+    <link href="Scripts/css/metro-schemes.min.css" rel="stylesheet" />
+    <link href="Scripts/css/metro-schemes.min.css" rel="stylesheet" />
+    <link href="Scripts/css/metro-colors.min.css" rel="stylesheet" />
+    <link href="Scripts/css/style.css" rel="stylesheet" />
+    <link href="Scripts/css/selectize.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	
+
+    <script src="<%=url%>Scripts/jquery_min.js"></script>
+    <script src="<%=url%>Scripts/js/metro.js"></script>
+    <script src="<%=url%>Scripts/js/select2.min.js"></script>
+    
+    <script src="<%=url%>Scripts/js/selectize.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <script>
+        var numFormat = 3;
+    </script>
+    <!-- #include file ="includejs.aspx" -->
+
+    <script>
+        $(document).ready(function (e) {
+            $("#btnSaveNew_Status").val("");
+            setInterval(function () {
+                $.ajax({
+                    url: "<%=url%>shared/shared.aspx",
+                    data: "app=refresh",
+                    type: "POST",
+                    async: true
+                });
+            }, 600000);
+		});
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <%
+        string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + HttpContext.Current.Request.ApplicationPath + (HttpContext.Current.Request.ApplicationPath != "/" ? "/" : "");
+        string skin = System.Configuration.ConfigurationManager.AppSettings["theme"];
+        string lang = Session["lang"].ToString();
+        
+    %>
+    <div class="app-bar <%=skin%>">
+        <!--<a class="app-bar-element" href="<%=url%>home/Default.aspx">
+            <span class="mif-home icon"></span>
+            <span class="title">Home
+            </span>
+        </a>-->
+        <span class="app-bar-divider"></span>
+		<span class="app-bar-divider"></span>
+
+        <ul class="app-bar-menu">
+            <%
+                sapi.db db = new sapi.db();
+                if (db.connect())
+                {
+                    try
+                    {
+                        //System.Data.DataTable tbl = db.readData("Select * from sys_mainMenuGroup order by mnug_Order ");
+                        System.Data.DataTable tbl = db.readData("Select * from sys_mainMenuGroup where mnug_MainMenuGroupID <> 4 order by mnug_Order "); // tmp remove report menu
+                        foreach (System.Data.DataRow row in tbl.Rows)
+                        {
+            %>
+
+
+			<% if (!string.IsNullOrEmpty(row["mnug_Url"].ToString()))
+               { %>
+            <li>
+                <a class="app-bar-elemen" href="<% Response.Write(url + row["mnug_Url"].ToString());%>">
+                    <span class="mif-<%=row["mnug_Icon"].ToString()%> icon"></span>
+                    <span class="title"><%=row["mnug_Text" + lang].ToString()%>
+                    </span>
+                </a>
+            </li>
+            <%} %>
+
+            <% if (string.IsNullOrEmpty(row["mnug_Url"].ToString()))
+               { %>
+            <li>
+                <a class="dropdown-toggle">
+                    <span class="mif-<%=row["mnug_Icon"].ToString()%> icon"></span>
+                    <span class="title"><%=row["mnug_Text" + lang].ToString()%>
+                    </span>
+                </a>
+
+				
+                <ul class="d-menu" data-role="dropdown">
+                    <% System.Data.DataTable tblMenu = db.readData("Select * from sys_mainMenu Where mmnu_GroupID = " +
+                           db.cNum(row["mnug_MainMenuGroupID"].ToString())
+                           + " order by mmnu_Order ");
+                       foreach (System.Data.DataRow rowMenu in tblMenu.Rows)
+                       {  
+                    %>
+                    <%if (rowMenu["mmnu_Icon"].ToString() == "divider")
+                      { %>
+                    <li class="divider"></li>
+                    <%}
+                      else
+                      { %>
+                    <% if (string.IsNullOrEmpty(rowMenu["mmnu_url"].ToString()))
+                       {
+                    %>
+                        <li><a href="" class="dropdown-toggle"><%=rowMenu["mmnu_Text" + lang].ToString() %></a>
+                        <ul class="d-menu" data-role="dropdown">
+                    <%
+                           System.Data.DataTable tblSubMenu = db.readData("Select * from sys_SubMenu Where smnu_MainMenuID = " +
+                           db.cNum(rowMenu["mmnu_MainMenuID"].ToString())
+                           + " order by smnu_Order ");
+                           foreach (System.Data.DataRow rowSubMenu in tblSubMenu.Rows)
+                           {
+                               if (rowSubMenu["smnu_Icon"].ToString() == "divider")
+                               {
+                                   %>
+                                    <li class="divider"></li>
+                                    <%
+                               }
+                               else
+                               {
+                                   %>
+                                    <li><a href="<%=url+rowSubMenu["smnu_Url"].ToString()%>"><%=rowSubMenu["smnu_Text" + lang].ToString() %></a></li>
+                                   <%
+                               }
+                           }
+                       %>
+                        </ul></li>
+                       <%
+                       }else{%>
+                        <li><a href="<%=url+rowMenu["mmnu_Url"].ToString()%>"><%=rowMenu["mmnu_Text" + lang].ToString() %></a></li>
+                    
+                    <%
+                        }
+                    } %>
+                    <% } %>
+                </ul>
+            </li>
+            <%} %>
+			<span class="app-bar-divider" style="color:yellow"></span>
+            <%
+										
+						}
+					}
+					catch (Exception ex) { }
+					finally { db.close(); }
+				}
+            %>
+
+			<!--Quick Lunch or Menu Bar-->
+			
+			<%--<span class="app-bar-divider"></span>--%>
+			<li><a href="<%=url%>quotation/quotationList.aspx"> <i class="fa fa-copy"></i> Quotation </a> </li>
+			<span class="app-bar-divider"></span>
+			<li><a href="<%=url%>customer/customerList.aspx"><i class="fa fa-users"></i> Company / Customer </a></li>
+			<%--<li><a href="<%=url%>customer/customerList.aspx"> Service Order </a></li>--%>
+			<span class="app-bar-divider"></span>
+			<li><a href="<%=url%>itemGroup/itemGroupList.aspx"><i class="fa fa-briefcase"></i> Sevice Types </a></li>
+			<!--<span class="app-bar-divider"></span>
+			<li><a href="<%=url%>item/itemList.aspx"><i class="fa fa-briefcase"></i> Services </a></li> -->
+			<span class="app-bar-divider"></span>
+			<li><a href="<%=url%>opportunity/opportunityList.aspx"><i class="fa fa-briefcase"></i> Project </a></li> 
+
+			<!--<li><a href="<%=url%>supplier/supplierList.aspx"><i class="fa fa-briefcase"></i> Supplier </a></li> -->
+
+        </ul>
+
+        <div class="app-bar-element place-right">
+
+            <a class="dropdown-toggle fg-white">
+                <span class="mif-user"></span>
+                <span class="title" id="lblUserName" runat="server"></span>
+            </a>
+
+            <div class="app-bar-drop-container app-bar.darcula place-right" data-role="dropdown" style="width: 200px">
+
+                <div class="bg-white" style="margin-top: 10px; text-align: center;">
+                    <img id="imgProfile" runat="server" style="border: none; width: 100px" />
+                </div>
+                <div>
+                    <a class="app-bar-element full-size" href="<%=url%>About.aspx">
+
+                        <span class="mif-lines icon"></span>
+                        <span class="title">About</span>
+
+                    </a>
+                    <a class="app-bar-element full-size" href="<%=url%>setting/setting.aspx?sett_settingid=1">
+
+                        <span class="mif-cog icon"></span>
+                        <span class="title">Settings</span>
+
+                    </a>
+
+                    <a class="app-bar-element full-size" href="<%=url%>changePassword/changePassword.aspx">
+
+                        <span class="mif-pencil icon"></span>
+                        <span class="title">Change Password</span>
+
+                    </a>
+
+                    <a class="app-bar-element full-size" href="<%=url%>Default.aspx?app=logout">
+                        <span class="mif-enter icon"></span>
+                        <span class="title">Log out
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="dvLeft" runat="server" class="" style="width: 200px; float: left;">
+    </div>
+    <div class="cell auto-size padding20 bg-white" id="dvContent" runat="server" style="float: right; width: calc(100% - 200px)">
+    </div>
+
+
+
+
+    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <div class="clearfix"></div>
+    <div id="dvFooter" style="height: 300px;">
+    </div>
+
+    <div data-role="dialog" class="panel dialog" id="dvLoadingOut"
+        data-close-button="false"
+        data-windows-style="true"
+        data-overlay="true"
+        data-overlay-color="op-dark"
+        data-overlay-click-close="false">
+
+        <div class="">
+            <br />
+            <br />
+            <br />
+            <div class="align-center"><span class="fg-cyan mif-spinner2 mif-ani-spin mif-4x"></span></div>
+            <br />
+            <br />
+            <br />
+        </div>
+
+    </div>
+
+    <input type="hidden" name="numFormat" id="numFormat" runat="server" />
+    <input type="hidden" name="btnSaveNew_Status" id="btnSaveNew_Status" />
+    
+</body>
+</html>

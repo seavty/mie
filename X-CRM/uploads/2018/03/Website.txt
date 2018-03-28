@@ -1,0 +1,13 @@
+﻿https://www.tutorialspoint.com/mysql/mysql_tutorial.pdf
+
+http://www.webbasedprogramming.com/MySQL/Teach%20Yourself%20MySQL%20in%2021%20Days.pdf
+
+//get six packs
+https://www.youtube.com/watch?time_continue=236&v=HHl3_6G3yRE
+https://www.youtube.com/watch?v=HowEO2Zha7w
+
+ទិញពេលមានគេចង់លក់មែនទែនព្រោះគេចង់លក់មែនទែនគឺតម្លៃនៅក្រោមទីផ្សារ
+លក់នៅពេលដែលមានគេទិញពិតប្រាកដព្រោះពេលដែលមានគេទិញគឺអាចទារបានថ្លៃ
+
+//binary
+https://www.tutorialspoint.com/csharp/csharp_binary_files.htm

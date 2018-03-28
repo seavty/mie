@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="querryData.aspx.cs" Inherits="X_CRM.querryData.querryData" %>
