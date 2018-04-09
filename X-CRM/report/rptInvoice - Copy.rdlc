@@ -34,9 +34,23 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value>ល.រ</Value>
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
                               <Value>No.</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -70,9 +84,23 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value>បរិយាយប្រភេទសេវាកម្ម</Value>
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
                               <Value>Description</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -117,9 +145,23 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value>បរិមាណ</Value>
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
                               <Value>Quantity</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -164,9 +206,23 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value>ថ្លៃឯកតា</Value>
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
                               <Value>Unit Price</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -211,9 +267,23 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value>ថ្លៃសេវាកម្ម</Value>
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
                               <Value>Amount</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -263,9 +333,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=RowNumber("creditNote")</Value>
+                              <Value>=RowNumber("invoice")</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                               </Style>
                             </TextRun>
@@ -303,16 +372,15 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="cnit_Description">
+                    <Textbox Name="init_Description">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cnit_Description.Value</Value>
+                              <Value>=Fields!init_Description.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                               </Style>
                             </TextRun>
@@ -320,7 +388,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>cnit_Description</rd:DefaultName>
+                      <rd:DefaultName>init_Description</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -344,16 +412,15 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="cnit_Qty">
+                    <Textbox Name="init_Qty">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cnit_Qty.Value</Value>
+                              <Value>=Fields!init_Qty.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Format>0;(0)</Format>
                               </Style>
@@ -364,7 +431,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>cnit_Qty</rd:DefaultName>
+                      <rd:DefaultName>init_Qty</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -388,18 +455,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="cnit_Price">
+                    <Textbox Name="init_Price">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cnit_Price.Value</Value>
+                              <Value>=Fields!init_Price.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'#,0.000;('$'#,0.000)</Format>
+                                <Format>'$'0.000;('$'0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -408,7 +474,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>cnit_Price</rd:DefaultName>
+                      <rd:DefaultName>init_Price</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -433,18 +499,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="cnit_Total">
+                    <Textbox Name="init_Total">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cnit_Total.Value</Value>
+                              <Value>=Fields!init_Total.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'#,0.000;('$'#,0.000)</Format>
+                                <Format>'$'0.000;('$'0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -453,7 +518,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>cnit_Total</rd:DefaultName>
+                      <rd:DefaultName>init_Total</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -499,9 +564,9 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>creditNote</DataSetName>
-        <Top>2.96751in</Top>
-        <Left>0.06164in</Left>
+        <DataSetName>invoice</DataSetName>
+        <Top>1.40501in</Top>
+        <Left>0.01796in</Left>
         <Height>0.5in</Height>
         <Width>7.19932in</Width>
         <Style>
@@ -511,19 +576,32 @@
           <Color>#6f2f9d</Color>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox12">
+      <Textbox Name="Textbox13">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Credit Note</Value>
+                <Value>វិក័យបត្រ</Value>
+                <Style>
+                  <FontFamily>Khmer OS Muol Light</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Invoice</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>20pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>Underline</TextDecoration>
+                  <FontSize>11pt</FontSize>
                   <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
@@ -534,10 +612,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>0.00844in</Top>
-        <Left>2.55013in</Left>
-        <Height>0.41678in</Height>
-        <Width>1.91118in</Width>
+        <Left>2.13561in</Left>
+        <Height>0.5in</Height>
+        <Width>2.52056in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -549,386 +626,23 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox2">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value xml:space="preserve"> </Value>
-                <Style>
-                  <FontFamily>kh system</FontFamily>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>NOTICE:</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>7pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>We are not responsible for any bank charges (If any)</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>kh system</FontFamily>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>kh system</FontFamily>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>kh system</FontFamily>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>kh system</FontFamily>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>kh system</FontFamily>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>kh system</FontFamily>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>kh system</FontFamily>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>kh system</FontFamily>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>___________________________________                                                                                                              ___________________________________</Value>
-                <Style>
-                  <FontFamily>Khmer OS</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value xml:space="preserve">            </Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>Customer's Signature &amp; Name                                                                                                                                     Seller's Signature &amp; Name</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <Color>#6f2f9d</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>7pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>10.05335cm</Top>
-        <Left>0.15657cm</Left>
-        <Height>5.41837cm</Height>
-        <Width>18.16254cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Tablix Name="Tablix5">
+      <Tablix Name="Tablix4">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.80188cm</Width>
+              <Width>4.35102cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.57904cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>8.1137cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.63549cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.54cm</Width>
-            </TablixColumn>
-          </TablixColumns>
-          <TablixRows>
-            <TablixRow>
-              <Height>0.635cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox51">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Total</Value>
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                                <Format>0.000;(0.000)</Format>
-                                <Color>#6f2f9d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox50</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="quot_Date2">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!crdn_Total.Value</Value>
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                                <Format>'$'#,0.000;('$'#,0.000)</Format>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>quot_Date</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                          <Width>0.75pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Style>Solid</Style>
-                          <Width>0.75pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Style>Solid</Style>
-                          <Width>0.75pt</Width>
-                        </RightBorder>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                        <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
-                      </Style>
-                    </Textbox>
-                    <rd:Selected>true</rd:Selected>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-          </TablixRows>
-        </TablixBody>
-        <TablixColumnHierarchy>
-          <TablixMembers>
-            <TablixMember />
-            <TablixMember />
-          </TablixMembers>
-        </TablixColumnHierarchy>
-        <TablixRowHierarchy>
-          <TablixMembers>
-            <TablixMember />
-          </TablixMembers>
-        </TablixRowHierarchy>
-        <DataSetName>creditNote</DataSetName>
-        <Top>8.811cm</Top>
-        <Left>13.10096cm</Left>
-        <Height>0.635cm</Height>
-        <Width>5.34188cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Tablix>
-      <Tablix Name="Tablix3">
-        <TablixBody>
-          <TablixColumns>
-            <TablixColumn>
-              <Width>2.5cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>8.75289cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.5cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>4.40965cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -937,16 +651,55 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox37">
+                    <Textbox Name="Textbox38">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Attn:</Value>
+                              <Value> វិ</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value>ក័យបត្រទៅ</Value>
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value>/</Value>
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value>Invoice To</Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value> ឈ្មោះក្រុមហ៊ុន ឬ អតិថិជន:</Value>
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -954,8 +707,20 @@
                           </TextRuns>
                           <Style />
                         </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value> Company/Customer Name:</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox37</rd:DefaultName>
+                      <rd:DefaultName>Textbox38</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -970,24 +735,25 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="invo_Attendance">
+                    <Textbox Name="Textbox29">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!invo_Attendance.Value</Value>
+                              <Value />
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
+                                <FontFamily>Khmer OS Muol Light</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <Color>#6f2f9d</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>invo_Attendance</rd:DefaultName>
+                      <rd:DefaultName>Textbox29</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1009,11 +775,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Date:</Value>
+                              <Value>=Fields!cust_Name.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>Khmer OS Content</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Color>#6f2f9d</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1025,6 +790,7 @@
                         <Border>
                           <Style>None</Style>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1035,25 +801,79 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="crdn_Date">
+                    <Textbox Name="Textbox40">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!crdn_Date.Value</Value>
+                              <Value>លេខរៀងវិក័យបត្រ:</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>Khmer OS Content</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Format>dd-MM-yyyy</Format>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value xml:space="preserve">          </Value>
+                              <Style>
+                                <FontFamily>Khmer OS</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value> Invoice No.:</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Color>#6f2f9d</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>crdn_Date</rd:DefaultName>
+                      <rd:DefaultName>Textbox40</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox43">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!invo_Name.Value</Value>
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox43</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1073,16 +893,16 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox48">
+                    <Textbox Name="Textbox32">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Company:</Value>
+                              <Value> អ៊ីមែល:</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>Khmer OS Content</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -1090,65 +910,12 @@
                           </TextRuns>
                           <Style />
                         </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox48</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="cust_Name">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cust_Name.Value</Value>
+                              <Value> Email:</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>cust_Name</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox50">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Debit Note #:</Value>
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
                             </TextRun>
@@ -1156,7 +923,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox50</rd:DefaultName>
+                      <rd:DefaultName>Textbox32</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1171,7 +938,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox53">
+                    <Textbox Name="Textbox30">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1180,44 +947,7 @@
                             <TextRun>
                               <Value />
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox53</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox54">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Email:</Value>
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>Khmer OS Content</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -1226,7 +956,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox54</rd:DefaultName>
+                      <rd:DefaultName>Textbox30</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1250,7 +980,7 @@
                             <TextRun>
                               <Value>=Fields!cust_Email.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>Khmer OS Content</FontFamily>
                                 <FontSize>9pt</FontSize>
                               </Style>
                             </TextRun>
@@ -1273,16 +1003,24 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox56">
+                    <Textbox Name="Textbox34">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Rerference:</Value>
+                              <Value xml:space="preserve">         </Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>Khmer OS</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value> កាលបរិច្ឆេទ:</Value>
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -1290,70 +1028,20 @@
                           </TextRuns>
                           <Style />
                         </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox56</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox58">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value xml:space="preserve">                     </Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
+                                <FontFamily>Khmer OS</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <Color>#6f2f9d</Color>
                               </Style>
                             </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox58</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox59">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
                             <TextRun>
-                              <Value>Tel:</Value>
+                              <Value>Date:</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>8pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
                             </TextRun>
@@ -1361,7 +1049,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox59</rd:DefaultName>
+                      <rd:DefaultName>Textbox34</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1376,224 +1064,27 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="cust_Phone">
+                    <Textbox Name="invo_Date">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!cust_Phone.Value</Value>
+                              <Value>=Fields!invo_Date.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>Khmer OS Content</FontFamily>
                                 <FontSize>9pt</FontSize>
+                                <Format>dd-MM-yyyy</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>cust_Phone</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox62">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                                <Color>#6f2f9d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox62</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox64">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox64</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.6cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox65">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Address:</Value>
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                                <Color>#6f2f9d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox65</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="cust_Address">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!cust_Address.Value</Value>
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>cust_Address</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox67">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                                <Color>#6f2f9d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox67</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox68">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox68</rd:DefaultName>
+                      <rd:DefaultName>invo_Date</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1616,53 +1107,714 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember />
             <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>creditNote</DataSetName>
-        <Top>1.70886cm</Top>
-        <Left>0.17328cm</Left>
-        <Height>3cm</Height>
-        <Width>18.16254cm</Width>
-        <ZIndex>4</ZIndex>
+        <DataSetName>invoice</DataSetName>
+        <Top>1.905cm</Top>
+        <Left>0.04562cm</Left>
+        <Height>1.2cm</Height>
+        <Width>18.21925cm</Width>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
-          <FontFamily>Times New Roman</FontFamily>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox69">
+      <Textbox Name="Textbox2">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>This is a credit note is make against invoice #_____________________</Value>
+                <Value xml:space="preserve">
+ </Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <Color>#6f2f9d</Color>
+                  <FontFamily>Kh system</FontFamily>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>សម្គាល់/Note:</Value>
+                <Style>
+                  <FontFamily>Kh system</FontFamily>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>
+ 1. វិក័យប័ត្រនេះ មិនរួមបញ្ចូលតម្លៃពន្ធអាករទាំងអស់។
+     This invoice is exclusive of all taxes. 
+ 2. វិក័យប័ត្រនេះ មិនអាចប្រើសម្រាប់ក្នុងគោលបំណងបង់ពន្ធបានទេ។
+    This invoice can not use for tax return purpose.
+ 3. យើងមិនទទួលខុសត្រូវចំពោះ ថ្លៃសេវាកម្មផ្ទេរប្រាក់របស់ធនាគារទេ។
+     We are not responsible for any bank service charges.
+ 4. ការទូទាត់នេះ មិនអាចប្តូរយកប្រាក់មកវិញទេ។ 
+     Payment is not refundable.
+ 5. សូមធ្វើការទូទាត់វិក័យប័ត្រ ក្នុងរយៈពេលមួយសប្ដាហ៍។
+     Please settle the invoice within a week after the issued date. 
+
+ </Value>
+                <Style>
+                  <FontFamily>Kh system</FontFamily>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>វិធីទូទាត់សាច់ប្រាក់/Payment Procedures:</Value>
+                <Style>
+                  <FontFamily>Kh system</FontFamily>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>
+ 1. ធ្វើការបង់ប្រាក់ដោយផ្ទាល់ជាមួយ គណនេយ្យកររបស់យើងនៅការិយាល័យ។
+     Pay directly to our accountant at the office.
+ 2. បង់ប្រាក់រឺផ្ទេរប្រាក់តាមធនាគារ/ Bank Deposit or Bank Transfer :
+</Value>
+                <Style>
+                  <FontFamily>Kh system</FontFamily>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox69</rd:DefaultName>
-        <Top>6.38316cm</Top>
-        <Left>0.17328cm</Left>
-        <Height>0.6cm</Height>
-        <Width>13.75289cm</Width>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>4.84754cm</Top>
+        <Left>0cm</Left>
+        <Height>6.97282cm</Height>
+        <Width>8.513cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>__________________________________</Value>
+                <Style>
+                  <FontFamily>Khmer OS</FontFamily>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ហត្ថលេខានិងឈ្មោះអ្នកទំនិញ</Value>
+                <Style>
+                  <FontFamily>Khmer OS Content</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Customer's Signature &amp; Name</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>15.2379cm</Top>
+        <Left>4.49062cm</Left>
+        <Height>1.58728cm</Height>
+        <Width>4.97116cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Top</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>សរុប</Value>
+                <Style>
+                  <FontFamily>Khmer OS Content</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <Format>0.000;(0.000)</Format>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>/</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <Format>0.000;(0.000)</Format>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Sub Total</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <Format>0.000;(0.000)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>4.83873cm</Top>
+        <Left>12.70777cm</Left>
+        <Height>0.63175cm</Height>
+        <Width>3.01357cm</Width>
         <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>បញ្ចុះតម្លៃ</Value>
+                <Style>
+                  <FontFamily>kh system</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>/</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Discount</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>5.4637cm</Top>
+        <Left>12.7113cm</Left>
+        <Height>0.63175cm</Height>
+        <Width>3.01357cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ប្រាក់នៅខ្វះ</Value>
+                <Style>
+                  <FontFamily>Khmer OS Content</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>/</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Balance</Value>
+                <Style>
+                  <FontFamily>Khmer OS Content</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>6.4797cm</Top>
+        <Left>12.7113cm</Left>
+        <Height>0.63175cm</Height>
+        <Width>3.01357cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!invo_SubTotal.Value</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <Format>'$'0.00;('$'0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>4.83873cm</Top>
+        <Left>15.79189cm</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+            <Width>0.5pt</Width>
+          </Border>
+          <TopBorder>
+            <Style>None</Style>
+          </TopBorder>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!invo_DiscountAmount.Value</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <Format>'$'0.00;('$'0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>5.46695cm</Top>
+        <Left>15.79542cm</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <TopBorder>
+            <Style>None</Style>
+          </TopBorder>
+          <BottomBorder>
+            <Width>0.5pt</Width>
+          </BottomBorder>
+          <LeftBorder>
+            <Width>0.5pt</Width>
+          </LeftBorder>
+          <RightBorder>
+            <Width>0.5pt</Width>
+          </RightBorder>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!invo_Balance.Value</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <Format>'$'0.00;('$'0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>6.51145cm</Top>
+        <Left>15.79542cm</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <TopBorder>
+            <Style>None</Style>
+          </TopBorder>
+          <BottomBorder>
+            <Width>0.5pt</Width>
+          </BottomBorder>
+          <LeftBorder>
+            <Width>0.5pt</Width>
+          </LeftBorder>
+          <RightBorder>
+            <Width>0.5pt</Width>
+          </RightBorder>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ប្រាក់កក់/Deposit</Value>
+                <Style>
+                  <FontFamily>Khmer OS Content</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>5.90495cm</Top>
+        <Left>12.71132cm</Left>
+        <Height>0.63175cm</Height>
+        <Width>3.01357cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!invo_Deposit.Value</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <Format>'$'0.00;('$'0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>5.9082cm</Top>
+        <Left>15.79544cm</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <TopBorder>
+            <Style>None</Style>
+          </TopBorder>
+          <BottomBorder>
+            <Width>0.5pt</Width>
+          </BottomBorder>
+          <LeftBorder>
+            <Width>0.5pt</Width>
+          </LeftBorder>
+          <RightBorder>
+            <Width>0.5pt</Width>
+          </RightBorder>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>1st floor, #17,St.306,Bkk1, Phnom Penh, Cambodia.</Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>kimsophat@gmail.com</Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>+855 12 914 201</Value>
+                <Style>
+                  <FontSize>6pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox12</rd:DefaultName>
+        <Top>0cm</Top>
+        <Left>10.76424cm</Left>
+        <Height>1.28792cm</Height>
+        <Width>7.50062cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Bank name: ACLEDA HQ 
+Name: Sop Phat 
+Account number: 00010057135912
+Swift:  ACLBKHPP
+Bank name: ABA Bank 
+Name: Sop Phat
+Account number: 000157424
+Swift: ABAAKHPP</Value>
+                <Style>
+                  <FontFamily>Khmer OS</FontFamily>
+                  <FontSize>6pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox19</rd:DefaultName>
+        <Top>11.99675cm</Top>
+        <Left>0.94343cm</Left>
+        <Height>2.7688cm</Height>
+        <Width>3.58294cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>__________________________________</Value>
+                <Style>
+                  <FontFamily>Khmer OS</FontFamily>
+                  <FontSize>7pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ហត្ថលេខានិងឈ្មោះអ្នកលក់</Value>
+                <Style>
+                  <FontFamily>Khmer OS Content</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>​</Value>
+                <Style>
+                  <FontFamily>Khmer OS</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Seller's Signature &amp; Name</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <Color>#6f2f9d</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox20</rd:DefaultName>
+        <Top>15.2379cm</Top>
+        <Left>13.25189cm</Left>
+        <Height>1.5476cm</Height>
+        <Width>4.97116cm</Width>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1674,10 +1826,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>15.57755cm</Height>
+    <Height>17.24852cm</Height>
     <Style />
   </Body>
-  <Width>18.44284cm</Width>
+  <Width>18.33544cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -1699,347 +1851,23 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="creditNote">
+    <DataSet Name="invoice">
       <Query>
         <DataSourceName>DataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="UNIT">
-          <DataField>UNIT</DataField>
+        <Field Name="itel_Name">
+          <DataField>itel_Name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cnit_CreditNoteItemID">
-          <DataField>cnit_CreditNoteItemID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cnit_Deleted">
-          <DataField>cnit_Deleted</DataField>
+        <Field Name="prlsName">
+          <DataField>prlsName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cnit_CreatedBy">
-          <DataField>cnit_CreatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cnit_CreatedDate">
-          <DataField>cnit_CreatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="cnit_UpdatedBy">
-          <DataField>cnit_UpdatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cnit_UpdatedDate">
-          <DataField>cnit_UpdatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="cnit_WorkflowID">
-          <DataField>cnit_WorkflowID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cnit_WorkflowItemID">
-          <DataField>cnit_WorkflowItemID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cnit_ZoneID">
-          <DataField>cnit_ZoneID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cnit_CreditNoteID">
-          <DataField>cnit_CreditNoteID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cnit_ItemID">
-          <DataField>cnit_ItemID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cnit_Description">
-          <DataField>cnit_Description</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="cnit_Qty">
-          <DataField>cnit_Qty</DataField>
+        <Field Name="invoPaidAmount">
+          <DataField>invoPaidAmount</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="cnit_Price">
-          <DataField>cnit_Price</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="cnit_Total">
-          <DataField>cnit_Total</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="cnit_InvoiceID">
-          <DataField>cnit_InvoiceID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_ItemID">
-          <DataField>item_ItemID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_Deleted">
-          <DataField>item_Deleted</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_CreatedBy">
-          <DataField>item_CreatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_CreatedDate">
-          <DataField>item_CreatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="item_UpdatedBy">
-          <DataField>item_UpdatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_UpdatedDate">
-          <DataField>item_UpdatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="item_ZoneID">
-          <DataField>item_ZoneID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_WorkflowID">
-          <DataField>item_WorkflowID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_WorkflowItemID">
-          <DataField>item_WorkflowItemID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_Name">
-          <DataField>item_Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_ItemGroupID">
-          <DataField>item_ItemGroupID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_Price">
-          <DataField>item_Price</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="item_Code">
-          <DataField>item_Code</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_Description">
-          <DataField>item_Description</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_Qty">
-          <DataField>item_Qty</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="item_isStock">
-          <DataField>item_isStock</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_isSet">
-          <DataField>item_isSet</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_SOAllocation">
-          <DataField>item_SOAllocation</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="item_Cost">
-          <DataField>item_Cost</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="item_LastCost">
-          <DataField>item_LastCost</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="item_ReOrderPoint">
-          <DataField>item_ReOrderPoint</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="item_ItemLayout3">
-          <DataField>item_ItemLayout3</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="item_Size">
-          <DataField>item_Size</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_Weight">
-          <DataField>item_Weight</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_Volume">
-          <DataField>item_Volume</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_IsCommission">
-          <DataField>item_IsCommission</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_Unit">
-          <DataField>item_Unit</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_ProcessingPeriod">
-          <DataField>item_ProcessingPeriod</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_Remark">
-          <DataField>item_Remark</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_Period">
-          <DataField>item_Period</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="item_ServiceType">
-          <DataField>item_ServiceType</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_CreditNoteID">
-          <DataField>crdn_CreditNoteID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Deleted">
-          <DataField>crdn_Deleted</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="crdn_CreatedBy">
-          <DataField>crdn_CreatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_CreatedDate">
-          <DataField>crdn_CreatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="crdn_UpdatedBy">
-          <DataField>crdn_UpdatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_UpdatedDate">
-          <DataField>crdn_UpdatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="crdn_WorkflowID">
-          <DataField>crdn_WorkflowID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_WorkflowItemID">
-          <DataField>crdn_WorkflowItemID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_ZoneID">
-          <DataField>crdn_ZoneID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Date">
-          <DataField>crdn_Date</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="crdn_CustomerID">
-          <DataField>crdn_CustomerID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_WarehouseID">
-          <DataField>crdn_WarehouseID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Total">
-          <DataField>crdn_Total</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Note">
-          <DataField>crdn_Note</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Name">
-          <DataField>crdn_Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="crdn_InvoiceID">
-          <DataField>crdn_InvoiceID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="crdn_UsedAmount">
-          <DataField>crdn_UsedAmount</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Balance">
-          <DataField>crdn_Balance</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Remark">
-          <DataField>crdn_Remark</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Phone">
-          <DataField>crdn_Phone</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Email">
-          <DataField>crdn_Email</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Address">
-          <DataField>crdn_Address</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Attendance">
-          <DataField>crdn_Attendance</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="crdn_Reference">
-          <DataField>crdn_Reference</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="itmg_ItemGroupID">
-          <DataField>itmg_ItemGroupID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="itmg_Deleted">
-          <DataField>itmg_Deleted</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="itmg_CreatedBy">
-          <DataField>itmg_CreatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="itmg_CreatedDate">
-          <DataField>itmg_CreatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="itmg_UpdatedBy">
-          <DataField>itmg_UpdatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="itmg_UpdatedDate">
-          <DataField>itmg_UpdatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="itmg_ZoneID">
-          <DataField>itmg_ZoneID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="itmg_WorkflowID">
-          <DataField>itmg_WorkflowID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="itmg_WorkflowItemID">
-          <DataField>itmg_WorkflowItemID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="itmg_Name">
-          <DataField>itmg_Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="itmg_ItemCatID">
-          <DataField>itmg_ItemCatID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="itmg_Remark">
-          <DataField>itmg_Remark</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="invo_InvoiceID">
           <DataField>invo_InvoiceID</DataField>
@@ -2277,80 +2105,108 @@
           <DataField>invo_PaymentType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="invo_Attendance">
-          <DataField>invo_Attendance</DataField>
+        <Field Name="init_InvoiceItemID">
+          <DataField>init_InvoiceItemID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="init_Deleted">
+          <DataField>init_Deleted</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ivpm_InvoicePaymentID">
-          <DataField>ivpm_InvoicePaymentID</DataField>
+        <Field Name="init_CreatedBy">
+          <DataField>init_CreatedBy</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="ivpm_Deleted">
-          <DataField>ivpm_Deleted</DataField>
+        <Field Name="init_CreatedDate">
+          <DataField>init_CreatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="init_UpdatedBy">
+          <DataField>init_UpdatedBy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="init_UpdatedDate">
+          <DataField>init_UpdatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="init_ZoneID">
+          <DataField>init_ZoneID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="init_WorkflowID">
+          <DataField>init_WorkflowID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="init_WorkflowItemID">
+          <DataField>init_WorkflowItemID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="init_Description">
+          <DataField>init_Description</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ivpm_CreatedBy">
-          <DataField>ivpm_CreatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_CreatedDate">
-          <DataField>ivpm_CreatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_UpdatedBy">
-          <DataField>ivpm_UpdatedBy</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_UpdatedDate">
-          <DataField>ivpm_UpdatedDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_ZoneID">
-          <DataField>ivpm_ZoneID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_WorkflowID">
-          <DataField>ivpm_WorkflowID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_WorkflowItemID">
-          <DataField>ivpm_WorkflowItemID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_Name">
-          <DataField>ivpm_Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_InvoiceID">
-          <DataField>ivpm_InvoiceID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_Date">
-          <DataField>ivpm_Date</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ivpm_Amount">
-          <DataField>ivpm_Amount</DataField>
+        <Field Name="init_Price">
+          <DataField>init_Price</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="ivpm_Remark">
-          <DataField>ivpm_Remark</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="init_Qty">
+          <DataField>init_Qty</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="ivpm_SaleOrderID">
-          <DataField>ivpm_SaleOrderID</DataField>
+        <Field Name="init_InvoiceID">
+          <DataField>init_InvoiceID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="ivpm_PaymentType">
-          <DataField>ivpm_PaymentType</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="init_Total">
+          <DataField>init_Total</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="ivpm_WarehouseID">
-          <DataField>ivpm_WarehouseID</DataField>
+        <Field Name="init_ItemID">
+          <DataField>init_ItemID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="ivpm_Payment">
-          <DataField>ivpm_Payment</DataField>
+        <Field Name="init_RPrice">
+          <DataField>init_RPrice</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="init_RQty">
+          <DataField>init_RQty</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="init_BQty">
+          <DataField>init_BQty</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="init_Cost">
+          <DataField>init_Cost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="init_LastCost">
+          <DataField>init_LastCost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="init_WarehouseID">
+          <DataField>init_WarehouseID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="init_Unit">
+          <DataField>init_Unit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="init_Email">
+          <DataField>init_Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="init_QuotationItemID">
+          <DataField>init_QuotationItemID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="init_Remark">
+          <DataField>init_Remark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="init_PeriodProcessing">
+          <DataField>init_PeriodProcessing</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="cust_CustomerID">
@@ -2457,6 +2313,186 @@
           <DataField>cust_InvoiceType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="user_userID">
+          <DataField>user_userID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="user_Deleted">
+          <DataField>user_Deleted</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="user_CreatedBy">
+          <DataField>user_CreatedBy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="user_CreatedDate">
+          <DataField>user_CreatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="user_UpdatedBy">
+          <DataField>user_UpdatedBy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="user_UpdatedDate">
+          <DataField>user_UpdatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="user_ZoneID">
+          <DataField>user_ZoneID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="user_userName">
+          <DataField>user_userName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="user_Password">
+          <DataField>user_Password</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="user_LastName">
+          <DataField>user_LastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="user_FirstName">
+          <DataField>user_FirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="user_SID">
+          <DataField>user_SID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="user_Gender">
+          <DataField>user_Gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="user_Token">
+          <DataField>user_Token</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_ItemID">
+          <DataField>item_ItemID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="item_Deleted">
+          <DataField>item_Deleted</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_CreatedBy">
+          <DataField>item_CreatedBy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="item_CreatedDate">
+          <DataField>item_CreatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="item_UpdatedBy">
+          <DataField>item_UpdatedBy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="item_UpdatedDate">
+          <DataField>item_UpdatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="item_ZoneID">
+          <DataField>item_ZoneID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="item_WorkflowID">
+          <DataField>item_WorkflowID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="item_WorkflowItemID">
+          <DataField>item_WorkflowItemID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="item_Name">
+          <DataField>item_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_ItemGroupID">
+          <DataField>item_ItemGroupID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="item_Price">
+          <DataField>item_Price</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="item_Code">
+          <DataField>item_Code</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="item_Description">
+          <DataField>item_Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_Qty">
+          <DataField>item_Qty</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="item_isStock">
+          <DataField>item_isStock</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_isSet">
+          <DataField>item_isSet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_SOAllocation">
+          <DataField>item_SOAllocation</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="item_Cost">
+          <DataField>item_Cost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="item_LastCost">
+          <DataField>item_LastCost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="item_ReOrderPoint">
+          <DataField>item_ReOrderPoint</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="item_ItemLayout3">
+          <DataField>item_ItemLayout3</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="item_Size">
+          <DataField>item_Size</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_Weight">
+          <DataField>item_Weight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_Volume">
+          <DataField>item_Volume</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_IsCommission">
+          <DataField>item_IsCommission</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_Unit">
+          <DataField>item_Unit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_ProcessingPeriod">
+          <DataField>item_ProcessingPeriod</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_Remark">
+          <DataField>item_Remark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_Period">
+          <DataField>item_Period</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="item_ServiceType">
+          <DataField>item_ServiceType</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="dati_ID">
           <DataField>dati_ID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -2497,14 +2533,110 @@
           <DataField>dati_ZoneID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="prls_PriceListID">
+          <DataField>prls_PriceListID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="prls_Deleted">
+          <DataField>prls_Deleted</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="prls_CreatedBy">
+          <DataField>prls_CreatedBy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="prls_CreatedDate">
+          <DataField>prls_CreatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="prls_UpdatedBy">
+          <DataField>prls_UpdatedBy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="prls_UpdatedDate">
+          <DataField>prls_UpdatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="prls_WorkflowID">
+          <DataField>prls_WorkflowID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="prls_WorkflowItemID">
+          <DataField>prls_WorkflowItemID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="prls_ZoneID">
+          <DataField>prls_ZoneID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="prls_Name">
+          <DataField>prls_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="salm_SalesmanID">
+          <DataField>salm_SalesmanID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="salm_Deleted">
+          <DataField>salm_Deleted</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="salm_CreatedBy">
+          <DataField>salm_CreatedBy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="salm_CreatedDate">
+          <DataField>salm_CreatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="salm_UpdatedBy">
+          <DataField>salm_UpdatedBy</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="salm_UpdatedDate">
+          <DataField>salm_UpdatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="salm_WorkflowID">
+          <DataField>salm_WorkflowID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="salm_WorkflowItemID">
+          <DataField>salm_WorkflowItemID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="salm_ZoneID">
+          <DataField>salm_ZoneID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="salm_Name">
+          <DataField>salm_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="salm_Code">
+          <DataField>salm_Code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="salm_ParentID">
+          <DataField>salm_ParentID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="salm_Phone">
+          <DataField>salm_Phone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="salm_CompanyPhone">
+          <DataField>salm_CompanyPhone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetMIE</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Dell\Desktop\SereyVong\My Projects\Web Project\MIE\X-CRM (MIE)\X-CRM (MIE)\X-CRM\X-CRM\report\DataSetMIE.xsd</rd:SchemaPath>
-        <rd:TableName>vCreditNoteDetailPrint</rd:TableName>
+        <rd:SchemaPath>C:\Users\Dell\Desktop\SereyVong\My Projects\MIE\X-CRM (MIE)\X-CRM (MIE)\X-CRM\X-CRM\report\DataSetMIE.xsd</rd:SchemaPath>
+        <rd:TableName>vInvoicePrint</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>vCreditNoteDetailPrintTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>vInvoicePrintTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

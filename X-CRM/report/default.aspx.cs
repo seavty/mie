@@ -75,7 +75,8 @@ namespace X_CRM.report
                                             url.Get("report").ToLower() == "rptStockTransfer".ToLower() ||
                                             url.Get("report").ToLower() == "rptExpense".ToLower() ||
                                             url.Get("report").ToLower() == "rptIncome".ToLower() ||
-                                            url.Get("report").ToLower() == "rptInvoiceBySalesman".ToLower()
+                                            url.Get("report").ToLower() == "rptInvoiceBySalesman".ToLower() ||
+                                            url.Get("report").ToLower() == "rptInvoiceReport".ToLower()
                                             )
                                             if (param == null)
                                                 param = new Dictionary<string, string>();
@@ -108,7 +109,44 @@ namespace X_CRM.report
                                                 param = new Dictionary<string, string>();
                                         vals.Add(st.ToLower(), Request.Form[st].ToString());*/
                                         if (!string.IsNullOrEmpty(vals[st.ToLower()]))
-                                        {
+                                        { 
+                                            if (url.Get("report").ToLower() == "rptInvoiceReport".ToLower())
+                                            {
+                                                if (url.Get("report").ToLower() == "rptInvoiceReport".ToLower())
+                                                {
+                                                    param = new Dictionary<string, string>();
+                                                    param.Add("Title", "From " + vals["invo_Date".ToLower()] +
+                                                        " To " + vals["invo_Date_To".ToLower()]);
+                                                    Session["rptParam"] = param;
+                                                }
+
+                                                if (st.ToLower() == "invo_Date".ToLower())
+                                                {
+                                                    string fr = "";
+                                                    if (vals.ContainsKey(st.ToLower() + "_hh"))
+                                                    {
+                                                        fr = " " + vals[st.ToLower() + "_hh"] + ":" + vals[st.ToLower() + "_mm"];
+                                                    }
+                                                    if (!string.IsNullOrEmpty(vals[st.ToLower()]))
+                                                        sql = sql + " and (" + st + ") >= " + db.sqlStr(db.getDate(vals[st.ToLower()]) + fr);
+                                                }
+                                                else if (st.ToLower() == "invo_Date_To".ToLower())
+                                                {
+                                                    string to = " 23:59:59";
+                                                    if (vals.ContainsKey(st.ToLower() + "_hh"))
+                                                    {
+                                                        to = " " + vals[st.ToLower() + "_hh"] + ":" + vals[st.ToLower() + "_mm"];
+                                                    }
+                                                    if (!string.IsNullOrEmpty(vals[st.ToLower()]))
+                                                        sql = sql + " and (invo_Date) <= " + db.sqlStr(db.getDate(vals[st.ToLower()]) + to);
+                                                }
+                                                else
+                                                {
+                                                    if (st.Contains("_mm") && st.Contains("_hh"))
+                                                        sql = sql + " and lower(" + st + ") = " + db.sqlStr(vals[st.ToLower()]);
+                                                }
+                                            }
+
                                             if (url.Get("report").ToLower() == "rptitem".ToLower())
                                             {
 

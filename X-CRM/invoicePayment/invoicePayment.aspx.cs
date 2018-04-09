@@ -132,7 +132,6 @@ namespace X_CRM.invoicePayment
                 sapi.readOnlyField.add("ivpm_InvoiceID");
                 sapi.readOnlyField.add("ivpm_Amount");
                 sapi.readOnlyField.add("ivpm_PaymentType");
-                
             }
 
             if (url.Get("ivpm_invoicepaymentid") != "")
@@ -142,6 +141,7 @@ namespace X_CRM.invoicePayment
                 {
                     sapi.Buttons.add("Invoice", "arrow-left", "info",
                         "window.location = '" + cls.baseUrl + "invoice/invoice.aspx?invo_invoiceid=" + rowInvoice["ivpm_InvoiceID"].ToString() + "'");
+                    sapi.Buttons.add("Print", "print", "success", "printInv(" + eid + ")");
                 }
             }
             string re = "";

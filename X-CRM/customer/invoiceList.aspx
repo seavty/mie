@@ -23,7 +23,8 @@
                 orderBy = "asc";
             }
             $(v).closest("div").find("#orderBy").val(orderBy);
-            _findRecord(frm, screen, "", 1, $(v).closest("div").attr("id"));
+			_findRecord(frm, screen, "", 1, $(v).closest("div").attr("id"));
+			$("table > tfoot").remove();
         }
 
 	</script>

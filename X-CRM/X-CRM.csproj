@@ -244,6 +244,7 @@
     <Content Include="quotation\quotationList.aspx" />
     <Content Include="receive\receive.aspx" />
     <Content Include="receive\receiveList.aspx" />
+    <Content Include="reportList\invoiceList.aspx" />
     <Content Include="report\crViewer.aspx" />
     <Content Include="report\default.aspx" />
     <Content Include="report\report.aspx" />
@@ -1229,6 +1230,13 @@
     <Compile Include="receive\receiveList.aspx.designer.cs">
       <DependentUpon>receiveList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="reportList\invoiceList.aspx.cs">
+      <DependentUpon>invoiceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportList\invoiceList.aspx.designer.cs">
+      <DependentUpon>invoiceList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="report\crViewer.aspx.cs">
       <DependentUpon>crViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1521,6 +1529,7 @@
     <EmbeddedResource Include="report\rptCoporateSereviceQuotation.rdlc" />
     <EmbeddedResource Include="report\rptKhmerLanguageQuotation.rdlc" />
     <EmbeddedResource Include="report\rptRelocationQuotation.rdlc" />
+    <EmbeddedResource Include="report\rptInvoiceReport.rdlc" />
     <EmbeddedResource Include="report\rptTaxInvoice.rdlc" />
     <EmbeddedResource Include="report\rptCommercialInvoice.rdlc" />
     <EmbeddedResource Include="report\rptInvoiceBySalesman.rdlc" />

@@ -358,7 +358,7 @@ namespace X_CRM.quotation
                 var strTest = JsonConvert.DeserializeObject<dynamic>(re);
                 hid = (string)strTest.tbl[0].msg;
 
-                string sqlItem = "SELECT * FROM tblQuotationItem WHERE quit_QuotationID=" + Request.Form["quotID"].ToString();
+                string sqlItem = "SELECT * FROM tblQuotationItem WHERE quit_Deleted IS NULL AND quit_QuotationID=" + Request.Form["quotID"].ToString();
                 dt = db.readData(sqlItem);
                 
                 foreach (DataRow dr in dt.Rows)

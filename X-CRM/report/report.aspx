@@ -17,7 +17,6 @@
     <link href="Scripts/css/metro-schemes.min.css" rel="stylesheet" />
     <link href="Scripts/css/metro-colors.min.css" rel="stylesheet" />
 
-
     <link href="Scripts/css/jquery.gridly.css" rel="stylesheet" />
 
     <script src="<%=url%>Scripts/jquery_min.js"></script>

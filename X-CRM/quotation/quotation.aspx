@@ -24,7 +24,8 @@
 			}
 
 			//hide showing from 1-2 of 2
-			$("table > tfoot").hide();
+			//$("table > tfoot").hide();
+			$("table > tfoot").remove();
 
 			//$(".table th:eq(5), .table td:eq(6)").remove();
 			//$(".table th:eq(5), .table td:eq(6)").remove();

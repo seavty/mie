@@ -342,7 +342,7 @@ namespace X_CRM.invoice
                 string id= url.Get("invo_invoiceid").ToString();
                 DataTable tb = db.readData("SELECT * FROM tblInvoice WHERE invo_InvoiceID = " + id);
 
-
+                sapi.Buttons.add("New Project", "plus", "warning", "window.location='../opportunity/opportunity.aspx?invo_invoiceid=" + eid + "'", "I", "tblOpportunity");
                 sapi.Buttons.add("Find", "search", "success", "window.location = '../invoice/invoiceList.aspx?invoice=" + tb.Rows[0]["invo_Type"] + "';");
                 if (!string.IsNullOrEmpty(tb.Rows[0]["invo_QuotationID"].ToString().Trim()))
                     sapi.Buttons.add("View Quotation", "loop2", "info", "window.location = '../quotation/quotation.aspx?quot_quotationid=" + tb.Rows[0]["invo_QuotationID"] + "';");

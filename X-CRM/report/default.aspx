@@ -14,13 +14,16 @@
             $(".datepicker>input").val("<%=DateTime.UtcNow.AddHours(7).ToString("dd") + "/" + DateTime.UtcNow.AddHours(7).ToString("MM") + "/" + DateTime.UtcNow.AddHours(7).ToString("yyyy")%>");
             $(".datepicker").datepicker();
 
-            $("#isExp").val("")
+			$("#isExp").val("");
+
+			if ($("h1").hasClass("text-light"))
+					$("h1").text("Invoice Report");
 
         });
 
         function exp()
         {
-            //$("#isExp").val("Y");
+            $("#isExp").val("Y");
             $("#btFind").click();
         }
 
@@ -51,7 +54,7 @@
         }
 
 
-    </script>
+	</script>
 
 </asp:Content>
 

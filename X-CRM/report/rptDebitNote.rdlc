@@ -399,7 +399,7 @@
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -444,7 +444,7 @@
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -810,7 +810,7 @@
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -844,6 +844,7 @@
                         <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>

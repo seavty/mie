@@ -75,7 +75,7 @@ namespace X_CRM.opportunity
                 cls.Mode = global::sapi.sapi.recordMode.New;
 
             string re = "";
-            sapi.Buttons.add("New Project", "plus", "success", "window.location = 'opportunity.aspx'");
+            //sapi.Buttons.add("New Project", "plus", "success", "window.location = 'opportunity.aspx'");
             re = cls.loadScreen(db, screen, frm, ref tblData, eid);
             return re;
         }

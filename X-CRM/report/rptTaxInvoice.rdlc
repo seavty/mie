@@ -67,6 +67,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -128,6 +129,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -189,6 +191,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -250,6 +253,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -311,6 +315,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -465,7 +470,7 @@
                               <Value>=Fields!init_Price.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -509,7 +514,7 @@
                               <Value>=Fields!init_Total.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -565,7 +570,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>taxInvoice</DataSetName>
-        <Top>3.15501in</Top>
+        <Top>3.28001in</Top>
         <Left>0.01796in</Left>
         <Height>0.5in</Height>
         <Width>7.19932in</Width>
@@ -581,8 +586,8 @@
         <Value>OfficialLogo</Value>
         <Sizing>FitProportional</Sizing>
         <Left>0.01796in</Left>
-        <Height>0.61722in</Height>
-        <Width>0.66667in</Width>
+        <Height>0.67278in</Height>
+        <Width>1.02084in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -712,7 +717,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Address: 1st Floor, Impact Hub, #17, street 306, BKK1, Phnom Penh</Value>
+                              <Value>Address: 1st Floor, Impact Hub, #17, Street 306, BKK1, Phnom Penh</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <Color>#6f2f9d</Color>
@@ -882,13 +887,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.35102cm</Width>
+              <Width>5.01248cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.57904cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>8.1137cm</Width>
+              <Width>8.03128cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.63549cm</Width>
@@ -903,7 +905,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox38">
+                    <Textbox Name="Textbox4">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -935,6 +937,131 @@
                           </TextRuns>
                           <Style />
                         </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox14">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox38">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
@@ -951,7 +1078,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Company/Customer Name</Value>
+                              <Value>Company/Customer Name:</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <Color>#6f2f9d</Color>
@@ -962,39 +1089,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox38</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox29">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Khmer OS Muol Light</FontFamily>
-                                <FontSize>7pt</FontSize>
-                                <Color>#6f2f9d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox29</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1031,7 +1125,6 @@
                         <Border>
                           <Style>None</Style>
                         </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1154,7 +1247,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Contact Information</Value>
+                              <Value>Contact Information:</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <Color>#6f2f9d</Color>
@@ -1165,39 +1258,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox32</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox30">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Khmer OS Content</FontFamily>
-                                <FontSize>9pt</FontSize>
-                                <Color>#6f2f9d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox30</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1365,7 +1425,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Address</Value>
+                              <Value>Address:</Value>
                               <Style>
                                 <FontFamily>Khmer OS Content</FontFamily>
                                 <FontSize>9pt</FontSize>
@@ -1377,39 +1437,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox8</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox28">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Khmer OS Content</FontFamily>
-                                <FontSize>9pt</FontSize>
-                                <Color>#6f2f9d</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox28</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1572,10 +1599,8 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <ColSpan>2</ColSpan>
                   </CellContents>
                 </TablixCell>
-                <TablixCell />
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="cust_VATTIN">
@@ -1691,7 +1716,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -1700,12 +1724,13 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>taxInvoice</DataSetName>
-        <Top>5.39538cm</Top>
+        <Top>5.07788cm</Top>
         <Left>0.04562cm</Left>
-        <Height>2.4cm</Height>
+        <Height>3cm</Height>
         <Width>18.21925cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
@@ -1736,7 +1761,7 @@
      We are NOT responsible for any bank service charges.
  2. ការទូទាត់នេះ មិនអាចប្តូរយកប្រាក់មកវិញទេ។ 
      Payment is NOT refundable.
- 3. សូមធ្វធ្វើការទូទាត់វិក័យប័ត្រ ក្នុងរយៈពេលមួយសប្ដាហ៍។
+ 3. សូមធ្វើការទូទាត់វិក័យប័ត្រ ក្នុងរយៈពេលមួយសប្ដាហ៍។
      Please settle the invoice within a week after the issued date. 
 
  </Value>
@@ -1845,7 +1870,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>    ហត្ថលេខានិងឈ្មោះអ្នកទិញ                                                                                                 ហត្ថលេខានិងឈ្មោះអ្នកលក់  </Value>
+                <Value>ហត្ថលេខា និងឈ្មោះអ្នកទិញ                                                                                                    ហត្ថលេខា និងឈ្មោះអ្នកលក់  </Value>
                 <Style>
                   <FontFamily>Khmer OS Content</FontFamily>
                   <FontSize>9pt</FontSize>
@@ -1929,7 +1954,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>9.35428cm</Top>
+        <Top>9.67178cm</Top>
         <Left>0.10231cm</Left>
         <Height>8.21999cm</Height>
         <Width>18.16256cm</Width>
@@ -2023,7 +2048,7 @@
                               <Value>=Sum(Fields!invo_SubTotal.Value)</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2117,7 +2142,7 @@
                               <Value>=Sum(Fields!invo_VATAmount.Value)</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2224,7 +2249,7 @@
                               <Value>=Sum(Fields!invo_DiscountAmount.Value)</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2317,7 +2342,7 @@
                               <Value>=Sum(Fields!invo_Deposit.Value)</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2424,7 +2449,7 @@
                               <Value>=Sum(Fields!invo_GTotal.Value)</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2462,6 +2487,7 @@
                         <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -2484,7 +2510,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>taxInvoice</DataSetName>
-        <Top>9.28373cm</Top>
+        <Top>9.60123cm</Top>
         <Left>12.76272cm</Left>
         <Height>3.175cm</Height>
         <Width>5.56917cm</Width>
@@ -2496,7 +2522,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>17.85528cm</Height>
+    <Height>17.89177cm</Height>
     <Style />
   </Body>
   <Width>18.3458cm</Width>

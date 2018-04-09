@@ -36,6 +36,7 @@
                             <TextRun>
                               <Value>No.</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -52,6 +53,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -71,6 +73,7 @@
                             <TextRun>
                               <Value>Description</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -98,6 +101,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -117,6 +121,7 @@
                             <TextRun>
                               <Value>Quantity</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -144,6 +149,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -163,6 +169,7 @@
                             <TextRun>
                               <Value>Unit Price</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -190,6 +197,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -209,6 +217,7 @@
                             <TextRun>
                               <Value>Amount</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -236,6 +245,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -260,6 +270,7 @@
                             <TextRun>
                               <Value>=RowNumber("relocationQuotaion")</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                               </Style>
                             </TextRun>
@@ -306,6 +317,7 @@
                             <TextRun>
                               <Value>=Fields!quit_Description.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                               </Style>
                             </TextRun>
@@ -348,6 +360,7 @@
                             <TextRun>
                               <Value>=Fields!quit_Qty.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Format>0;(0)</Format>
                               </Style>
@@ -391,8 +404,9 @@
                             <TextRun>
                               <Value>=Fields!quit_Price.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -435,8 +449,9 @@
                             <TextRun>
                               <Value>=Fields!quit_Total.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -508,8 +523,8 @@
         <Value>OfficialLogo</Value>
         <Sizing>FitProportional</Sizing>
         <Left>0.02753in</Left>
-        <Height>0.61722in</Height>
-        <Width>0.66667in</Width>
+        <Height>0.67278in</Height>
+        <Width>1.02084in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -700,7 +715,7 @@ info@makingiteasycambodia.com</Value>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -774,7 +789,7 @@ info@makingiteasycambodia.com</Value>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -847,7 +862,7 @@ info@makingiteasycambodia.com</Value>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -920,7 +935,7 @@ info@makingiteasycambodia.com</Value>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1948,6 +1963,7 @@ info@makingiteasycambodia.com</Value>
                             <TextRun>
                               <Value>Sub Total</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Format>0.000;(0.000)</Format>
                                 <Color>#6f2f9d</Color>
@@ -1985,7 +2001,7 @@ info@makingiteasycambodia.com</Value>
                               <Value>=Fields!quot_SubTotal.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2037,6 +2053,7 @@ info@makingiteasycambodia.com</Value>
                             <TextRun>
                               <Value>Discount</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -2073,7 +2090,7 @@ info@makingiteasycambodia.com</Value>
                               <Value>=Fields!quot_DiscountAmount.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2125,7 +2142,7 @@ info@makingiteasycambodia.com</Value>
                             <TextRun>
                               <Value>Total</Value>
                               <Style>
-                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Color>#6f2f9d</Color>
                               </Style>
@@ -2162,7 +2179,7 @@ info@makingiteasycambodia.com</Value>
                               <Value>=Fields!quot_Total.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2214,21 +2231,10 @@ info@makingiteasycambodia.com</Value>
                             <TextRun>
                               <Value>VAT</Value>
                               <Style>
-                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
                                 <Format>0.000;(0.000)</Format>
                                 <Color>#6f2f9d</Color>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value xml:space="preserve"> </Value>
-                              <Style>
-                                <FontStyle>Normal</FontStyle>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>9pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <TextDecoration>None</TextDecoration>
-                                <Color>#7030a0</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2263,7 +2269,7 @@ info@makingiteasycambodia.com</Value>
                               <Value>=Fields!quot_VATAmount.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2352,7 +2358,7 @@ info@makingiteasycambodia.com</Value>
                               <Value>=Fields!quot_Deposit.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2441,8 +2447,9 @@ info@makingiteasycambodia.com</Value>
                             <TextRun>
                               <Value>=Fields!quot_Balance.Value</Value>
                               <Style>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2476,6 +2483,7 @@ info@makingiteasycambodia.com</Value>
                         <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>

@@ -188,6 +188,9 @@ namespace X_CRM.opportunity
                 sapi.defaultValue.add("oppo_Date",DateTime.Now.ToShortDateString());
                 sapi.defaultValue.add("oppo_StartDate", DateTime.Now.ToShortDateString());
                 sapi.defaultValue.add("oppo_Status","New");
+                string invoID = url.Get("invo_invoiceid");
+                string invoNo = db.readData("IN", "SELECT invo_Name AS [IN] FROM tblInvoice WHERE invo_InvoiceID=" + invoID);
+                sapi.defaultValue.add("oppo_InvoiceNo", invoNo);
             }
 
             if (mode == sapi.sapi.recordMode.View)
@@ -219,7 +222,7 @@ namespace X_CRM.opportunity
                     }
                     if (!string.IsNullOrEmpty(dt.Rows[0]["oppo_InvoiceID"].ToString()))
                     {
-                        sapi.Buttons.add("Invoice", "arrow-left", "info", "window.location = '../invoice/invoice.aspx?invo_invoiceid=" + dt.Rows[0]["oppo_InvoiceID"] + "';");
+                        sapi.Buttons.add("View Invoice", "arrow-left", "info", "window.location = '../invoice/invoice.aspx?invo_invoiceid=" + dt.Rows[0]["oppo_InvoiceID"] + "';");
                     }
                 }
             }
@@ -264,6 +267,10 @@ namespace X_CRM.opportunity
                     vals["oppo_Code".ToLower()] = dr["cust_Code"].ToString();
                     vals["oppo_VATTIN".ToLower()] = dr["cust_VATTIN"].ToString();
                 }
+            }
+            if (!string.IsNullOrEmpty(url.Get("invo_invoiceid")))
+            {
+                aVal.Add("oppo_InvoiceID".ToLower(), url.Get("invo_invoiceid"));
             }
             re = cls.saveRecord(screen, vals, db, aVals: aVal);
 

@@ -637,7 +637,7 @@ namespace X_CRM.report
                                     ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/report/rptRelocationQuotation.rdlc");
                                 else if (serviceType == "Khmer Language Services".ToLower())
                                     ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/report/rptKhmerLanguageQuotation.rdlc");
-                                else if(serviceType == "Corporate Services (formation & registrations)".ToLower() || serviceType == "Corporate Services (maintenance, renewal, change & closure)")
+                                else if(serviceType == "Corporate Services (formation & registrations)".ToLower() || serviceType == "Corporate Services (maintenance, renewal, change & closure)".ToLower())
                                     ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/report/rptCoporateSereviceQuotation.rdlc");
                                 datasource = new ReportDataSource("relocationQuotaion", dt);
                                 
@@ -650,17 +650,51 @@ namespace X_CRM.report
                                 datasource = new ReportDataSource("creditNote",
                                     db.readData("Select * from vCreditNoteDetailPrint where crdn_CreditNoteID = " + Request.QueryString["eid"]));
 
-                                if (Session["rptParam"] != null)
-                                {
-                                    Dictionary<string, string> param = (Dictionary<string, string>)Session["rptParam"];
-                                    foreach (var pram in param)
-                                    {
-                                        ReportParameter p = new ReportParameter(pram.Key, pram.Value);
-                                        this.ReportViewer1.LocalReport.SetParameters(new ReportParameter[] { p });
-                                    }
-                                }
+                                //if (Session["rptParam"] != null)
+                                //{
+                                //    Dictionary<string, string> param = (Dictionary<string, string>)Session["rptParam"];
+                                //    foreach (var pram in param)
+                                //    {
+                                //        ReportParameter p = new ReportParameter(pram.Key, pram.Value);
+                                //        this.ReportViewer1.LocalReport.SetParameters(new ReportParameter[] { p });
+                                //    }
+                                //}
                             }
 
+                            if (Request.QueryString["report"] == "rptInvoiceReport")
+                            {
+                                var url = HttpUtility.ParseQueryString((new Uri(Request.Url.Scheme + "://" + Request.Url.Authority + Uri.UnescapeDataString(Request.RawUrl))).Query);
+                                var sd = url.Get("invo_Date");
+                                var ed = url.Get("invo_Date_To");
+                                ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/report/rptInvoiceReport.rdlc");
+                                DataTable dt = db.readData(
+                                    " Declare @date date = " + db.sqlStr(db.getDate(url.Get("invo_Date"))) +
+                                    " Declare @Todate date = " + db.sqlStr(db.getDate(url.Get("invo_Date_To"))) +
+                                    " select * from vInvoice " +
+                                    " where cast(invo_Date as date) >= @date " +
+                                    " and cast(invo_Date as date)<=@Todate "
+                                );
+                                datasource = new ReportDataSource("taxInvoice",dt);
+
+                                //if (Session["rptParam"] != null)
+                                //{
+                                //    Dictionary<string, string> param = (Dictionary<string, string>)Session["rptParam"];
+                                //    foreach (var pram in param)
+                                //    {
+                                //        ReportParameter p = new ReportParameter(pram.Key, pram.Value);
+                                //        this.ReportViewer1.LocalReport.SetParameters(new ReportParameter[] { p });
+                                //    }
+                                //}
+                            }
+
+                            if (Request.QueryString["report"] == "rptOfficialReceipt")
+                            {
+                                string id = Request.QueryString["eid"];
+                                ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/report/rptOfficialReceipt.rdlc");
+                                var i = Request.QueryString["pid"];
+                                datasource = new ReportDataSource("invoicePayment",
+                                    db.readData("Select * from vInvoicePayment where ivpm_InvoicePaymentID = " + Request.QueryString["pid"]));
+                            }
 
                             ReportViewer1.LocalReport.DataSources.Clear();
                             /*var setup = ReportViewer1.GetPageSettings();
@@ -675,6 +709,7 @@ namespace X_CRM.report
                             String encoding = String.Empty;
                             String extension = String.Empty;
                             Byte[] byteViewer;
+                            var b = Request.QueryString["isExp"];
 
                             if (Request.QueryString["isExp"] == null)
                             {

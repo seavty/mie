@@ -3,18 +3,17 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="headContent">
     <script>
         $(document).ready(function (e) {
-
-
             $("#frmMaster").append($("#dvList"));
-            event();
-        });
+			event();
+			$("table > tfoot").remove();
+		});
 
         function savePreLine() {
             var re = _savePreLine("../include.aspx", "tblCreditNoteItemNew", "frm", "dvList");
             var ind = $("#dvList>table>tbody>tr").length;
             $("#dvList>table>tbody>tr:eq(" + (ind - 1) + ")").before(re);
             event();
-            calTotal()
+			calTotal();
         }
 
         function delLine(pos, v) {

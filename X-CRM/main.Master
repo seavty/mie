@@ -183,9 +183,9 @@
 			<!--<span class="app-bar-divider"></span>
 			<li><a href="<%=url%>item/itemList.aspx"><i class="fa fa-briefcase"></i> Services </a></li> -->
 			<span class="app-bar-divider"></span>
-			<li><a href="<%=url%>opportunity/opportunityList.aspx"><i class="fa fa-briefcase"></i> Project </a></li> 
-
-			<!--<li><a href="<%=url%>supplier/supplierList.aspx"><i class="fa fa-briefcase"></i> Supplier </a></li> -->
+			<li><a href="<%=url%>opportunity/opportunityList.aspx"><i class="fa fa-briefcase"></i> Project </a></li>
+			<%--<span class="app-bar-divider"></span>
+			<li><a href="<%=url%>reportList/invoiceList.aspx"><i class="fa fa-briefcase"></i> Report </a></li>--%>
 
         </ul>
 

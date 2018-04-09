@@ -6,7 +6,8 @@
             $("#frmMaster").append($("#dvList"));
 			initComp("");
 			$("#btFind").click();
-			$("table > tfoot").hide();
+			//$("table > tfoot").hide();
+			$("table > tfoot").remove();
         });
 
         function findRecord(frm, screen, cPage) {
@@ -23,7 +24,8 @@
                 orderBy = "asc";
             }
             $(v).closest("div").find("#orderBy").val(orderBy);
-            _findRecord(frm, screen, "", 1, $(v).closest("div").attr("id"));
+			_findRecord(frm, screen, "", 1, $(v).closest("div").attr("id"));
+			$("table > tfoot").remove();
 		}
 	</script>
 

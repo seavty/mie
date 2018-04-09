@@ -6,9 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-namespace X_CRM.customer
+namespace X_CRM.reportList
 {
-    public partial class customerList : System.Web.UI.Page
+    public partial class invoiceList : System.Web.UI.Page
     {
         sapi.sapi cls = new sapi.sapi();
         sapi.db db = new sapi.db();
@@ -16,12 +16,16 @@ namespace X_CRM.customer
 
         Dictionary<string, string> vals = new Dictionary<string, string>();
 
-        string screen = "tblCustomerFind";
-        string grid = "tblCustomerList";
+        string screen = "rptInvoiceReport";
+        string grid = "tblInvoiceListIsTax";
         string frm = "frmMaster";
+
+        System.Collections.Specialized.NameValueCollection url;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            init();
+
             try
             {
                 if (db.connect())
@@ -35,17 +39,24 @@ namespace X_CRM.customer
                             {
                                 vals.Add(st.ToLower(), Request.Form[st].ToString());
                             }
-                            //string orderFieldBy = "cust_Code";
-                            //string orderBy = "desc";
-
-                            string orderFieldBy = "cust_Code";
-                            string orderBy = "DESC";
+                            string orderFieldBy = "invo_Name";
+                            string orderBy = "";
+                            string filter = "";
+                            //string filter = " AND invo_Type = '" + url.Get("invoice") + "'";
+                            //string filter = " AND 1 = 2"; //TEST FILTER TRUE OR FALSE. IF TRUE SHOW ALL ELSE NOT SHOW 
+                            //string filter = " AND 1 = 1";
+                            int mode = 0;
 
                             if (Request.Form["orderFieldBy"] != null) orderFieldBy = Request.Form["orderFieldBy"].ToString();
                             if (Request.Form["orderBy"] != null) orderBy = Request.Form["orderBy"].ToString();
 
+                            if (url.Get("invoice") == "Tax Invoice")
+                                grid = "tblInvoiceTaxList";
+                            else
+                                grid = "tblInvoiceList";
+                            //findRecord(db db, string screen, string grid, string frm, Dictionary < string, string > vals, string orderFieldBy, string orderBy = "ASC", int cPage = 1, int mode = 0, string filter = "", int assc = 1, bool hidePage = false, bool hideDel = false, bool hideNewRow = false);
                             Response.Write(cls.findRecord(db, screen, grid, frm, vals, orderFieldBy, orderBy,
-                                cPage: (int)db.cNum(Request.Form["cPage"].ToString())));
+                                cPage: (int)db.cNum(Request.Form["cPage"].ToString()), mode: 0, filter: filter));
                         }
                         db.close();
                         cls.endRequest();
@@ -53,11 +64,12 @@ namespace X_CRM.customer
                     }
                     else
                     {
+
                         ((System.Web.UI.HtmlControls.HtmlGenericControl)Master.FindControl("dvContent")).InnerHtml =
                             loadScreen("0", global::sapi.sapi.recordMode.New);
 
                         ((System.Web.UI.HtmlControls.HtmlGenericControl)Master.FindControl("dvLeft")).InnerHtml =
-                            cls.loadTab(db, "", "", 1,showCTab:true);
+                            cls.loadTab(db, "", "", 1, showCTab: true);
                     }
 
                 }
@@ -68,17 +80,23 @@ namespace X_CRM.customer
             }
             finally { db.close(); }
         }
-
+        void init()
+        {
+            url = HttpUtility.ParseQueryString((new Uri(Request.Url.Scheme + "://" + Request.Url.Authority + Uri.UnescapeDataString(Request.RawUrl))).Query);
+        }
         string loadScreen(string eid, global::sapi.sapi.recordMode mode)
         {
             cls.Mode = mode;
-            cls.scrnType = global::sapi.sapi.screenType.SearchScreen;
+            cls.scrnType = sapi.sapi.screenType.SearchScreen;
 
             if (eid == "0")
-                cls.Mode = global::sapi.sapi.recordMode.New;
-
+                cls.Mode = sapi.sapi.recordMode.New;
+            
             string re = "";
-            sapi.Buttons.add(cls.getString("New Customer",db), "plus", "success", "window.location = 'customer.aspx'","I","tblCustomer");
+
+            sapi.Buttons.add("Export to PDF", "print", "success", "printInv(" + eid + ")");
+            sapi.Buttons.add("Export to Excel", "print", "success", "printInv(" + eid + ")");
+
             re = cls.loadScreen(db, screen, frm, ref tblData, eid);
             return re;
         }

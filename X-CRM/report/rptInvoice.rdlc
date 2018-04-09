@@ -471,7 +471,7 @@
                               <Value>=Fields!init_Price.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -515,7 +515,7 @@
                               <Value>=Fields!init_Total.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
-                                <Format>'$'0.000;('$'0.000)</Format>
+                                <Format>'$' #,0.000;('$' #,0.000)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -657,7 +657,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox38">
+                    <Textbox Name="Textbox8">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -700,6 +700,164 @@
                           </TextRuns>
                           <Style />
                         </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox9">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Khmer OS Muol Light</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Color>#6f2f9d</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox18">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Khmer OS Content</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox18</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox38">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
@@ -796,7 +954,6 @@
                         <Border>
                           <Style>None</Style>
                         </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1120,12 +1277,13 @@
           <TablixMembers>
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>invoice</DataSetName>
-        <Top>1.905cm</Top>
+        <Top>1.5875cm</Top>
         <Left>0.04562cm</Left>
-        <Height>1.2cm</Height>
+        <Height>1.8cm</Height>
         <Width>18.21925cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
@@ -1147,6 +1305,7 @@
                   <FontFamily>Kh system</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
@@ -1155,6 +1314,7 @@
                   <FontFamily>Kh system</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Bold</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
@@ -1175,6 +1335,7 @@
                   <FontFamily>Kh system</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
@@ -1183,6 +1344,7 @@
                   <FontFamily>Kh system</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Bold</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
@@ -1194,6 +1356,7 @@
                   <FontFamily>Kh system</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1214,6 +1377,7 @@
                   <FontFamily>Khmer OS</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1227,6 +1391,7 @@
                   <FontFamily>Khmer OS</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1240,6 +1405,7 @@
                   <FontFamily>Khmer OS</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1253,6 +1419,7 @@
                   <FontFamily>Khmer OS</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1266,6 +1433,7 @@
                   <FontFamily>Khmer OS</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1279,6 +1447,7 @@
                   <FontFamily>Khmer OS</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1292,6 +1461,7 @@
                   <FontFamily>Khmer OS</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1304,6 +1474,7 @@
                 <Style>
                   <FontFamily>Khmer OS</FontFamily>
                   <FontSize>7pt</FontSize>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1312,7 +1483,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ហត្ថលេខានិងឈ្មោះអ្នកទិញ                                                                                                      ហត្ថលេខានិងឈ្មោះអ្នកលក់</Value>
+                <Value>ហត្ថលេខា និងឈ្មោះអ្នកទិញ                                                                                                    ហត្ថលេខា និងឈ្មោះអ្នកលក់</Value>
                 <Style>
                   <FontFamily>Khmer OS Content</FontFamily>
                   <FontSize>9pt</FontSize>
@@ -1340,6 +1511,7 @@
                   <FontFamily>Kh system</FontFamily>
                   <FontSize>6pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1376,6 +1548,7 @@
                   <FontFamily>Khmer OS Content</FontFamily>
                   <FontSize>9pt</FontSize>
                   <Format>0.000;(0.000)</Format>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
@@ -1383,6 +1556,7 @@
                 <Style>
                   <FontSize>12pt</FontSize>
                   <Format>0.000;(0.000)</Format>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
@@ -1390,6 +1564,7 @@
                 <Style>
                   <FontSize>9pt</FontSize>
                   <Format>0.000;(0.000)</Format>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1426,18 +1601,21 @@
                 <Style>
                   <FontFamily>kh system</FontFamily>
                   <FontSize>9pt</FontSize>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>/</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>Discount</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1474,12 +1652,14 @@
                 <Style>
                   <FontFamily>Khmer OS Content</FontFamily>
                   <FontSize>9pt</FontSize>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>/</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
               <TextRun>
@@ -1487,6 +1667,7 @@
                 <Style>
                   <FontFamily>Khmer OS Content</FontFamily>
                   <FontSize>9pt</FontSize>
+                  <Color>#6f2f9d</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1522,7 +1703,7 @@
                 <Value>=Fields!invo_SubTotal.Value</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
-                  <Format>'$'0.00;('$'0.00)</Format>
+                  <Format>'$' #,0.000;('$' #,0.000)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1563,7 +1744,7 @@
                 <Value>=Fields!invo_DiscountAmount.Value</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
-                  <Format>'$'0.00;('$'0.00)</Format>
+                  <Format>'$' #,0.000;('$' #,0.000)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1612,7 +1793,7 @@
                 <Value>=Fields!invo_Balance.Value</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
-                  <Format>'$'0.00;('$'0.00)</Format>
+                  <Format>'$' #,0.000;('$' #,0.000)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1698,7 +1879,7 @@
                 <Value>=Fields!invo_Deposit.Value</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
-                  <Format>'$'0.00;('$'0.00)</Format>
+                  <Format>'$' #,0.000;('$' #,0.000)</Format>
                 </Style>
               </TextRun>
             </TextRuns>

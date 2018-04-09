@@ -39,11 +39,16 @@
                     alert("Error Deleting Record !\n" + re);
                 }
             }
-        }
+		}
+
+		function printInv(id) {
+             //chat.server.send("<%=Session["SID"].ToString()%>", id,"printserver");
+             window.open("../report/report.aspx?report=rptOfficialReceipt&pid=" + id, "_blank");
+		}
 
 
 
-    </script>
+	</script>
 
 </asp:Content>
 
